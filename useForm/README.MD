@@ -16,7 +16,17 @@ Recuerda que los Custom hooks son funciones que extraen la logica de los compone
         })
     return (
         <div>
-        
+            <form onSubmit={handlesearch}>
+              <input
+              type="text"
+              onChange={handleInputChange}
+              name="Searchvalues"
+              value={Searchvalues}
+              >
+              </input>
+
+              <button type="submit" className="btn btn-primary">Search</button>
+            </form>
         </div>
     )
     }
