@@ -11,9 +11,15 @@ Recuerda que los Custom hooks son funciones que extraen la logica de los compone
     import { useForm } from './yourdirectorio/useForm'; //1)
 
     export default function Search(){
-        const [values, handleInputChange] = useForm({
+    const [values, handleInputChange] = useForm({
         Searchvalues:"" //2
-        })
+    })
+
+    const handlesearch = (e)=>{
+        e.preventDefault()
+        console.log(Searchvalues)
+
+    }
     return (
         <div>
             <form onSubmit={handlesearch}>
