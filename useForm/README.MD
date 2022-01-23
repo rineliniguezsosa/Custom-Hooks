@@ -5,6 +5,11 @@ Recuerda que los Custom hooks son funciones que extraen la logica de los compone
 1.-Importa la funcion useForm pensemos que estamos en nuestro Search.js
 <br>
 2.-Desestructuramos los valores de retorno de la funcion useForm y le definimos un estado inicial
+<br>
+3.-Desestructuramos los valores de values
+<br>
+4.-Definimos por cada onChange la referencia a la función handleInputChange la cual actualizara los estados de los inputs mediante sus atributos name
+<br>
 
 ```javascript
     import React from 'react
@@ -16,7 +21,7 @@ Recuerda que los Custom hooks son funciones que extraen la logica de los compone
         Searchvalues2:""
     })
 
-    const { Searchvalues,Searchvalues2 } = values;
+    const { Searchvalues,Searchvalues2 } = values; //3
 
     const handlesearch = (e)=>{
         e.preventDefault()
@@ -28,7 +33,7 @@ Recuerda que los Custom hooks son funciones que extraen la logica de los compone
             <form onSubmit={handlesearch}>
               <input
               type="text"
-              onChange={handleInputChange}
+              onChange={handleInputChange} //4
               name="Searchvalues"
               value={Searchvalues}
               >
@@ -36,7 +41,7 @@ Recuerda que los Custom hooks son funciones que extraen la logica de los compone
 
               <input
               type="text"
-              onChange={handleInputChange}
+              onChange={handleInputChange} //4
               name="Searchvalues2"
               value={Searchvalues2}
               >
