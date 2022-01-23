@@ -10,8 +10,15 @@ Recuerda que los Custom hooks son funciones que extraen la logica de los compone
     import React from 'react
     import { useForm } from './yourdirectorio/useForm'; //1)
 
-    const [values, handleInputChange] = useForm({
-     Searchvalues:"" //2
-    })
+    export default function Search(){
+        const [values, handleInputChange] = useForm({
+        Searchvalues:"" //2
+        })
+    return (
+        <div>
+        
+        </div>
+    )
+    }
 ```
 
