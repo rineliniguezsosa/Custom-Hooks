@@ -20,7 +20,7 @@ Recuerda que los Custom hooks son funciones que extraen la logica de los compone
 
     const handlesearch = (e)=>{
         e.preventDefault()
-        console.log(Searchvalues)
+        console.log(Searchvalues,Searchvalues2)
 
     }
     return (
